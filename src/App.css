@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+body {
+  background-color: white;
+}
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 75.5%; /* 12px × 75.5% = 9.06px ≈ 9px */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styles pour l'en-tête */
+.header {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(226, 226, 204);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style pour l'image de la première ligne */
+.row1 {
+  position: relative; /* Permet de positionner les éléments enfants par rapport à cette rangée */
+  width: 50%; /* Occupe 50% de la largeur disponible */
+  height: 500px; /* Hauteur de la rangée */
+  background-image: url("./images/capture2.PNG"); /* Spécifiez l'URL de votre image */
+  background-size: cover; /* Assurez-vous que l'image couvre toute la rangée */
+  background-position: center; /* Centrez l'image */
+  border-radius: 0 50% 50% 0; /* Forme de demi-cercle à gauche */
+  overflow: hidden; /* Cachez les parties de l'image en dehors du cercle */
+  margin-left: -1000px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style pour le texte de la première ligne */
+.row1 h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 100px; /* Marge au-dessus du texte */
+  padding-left: 10%; /* Décale le texte vers la droite */
+}
+
+/* Reste de vos styles existants */
+
+/* Reste de vos styles existants */
+
+/* Styles pour la deuxième ligne de texte */
+.row2 {
+  position: absolute;
+  top: 10px;
+  right: 150px;
+  text-align: center;
+}
+
+.row2 h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+/* Style pour l'image de livre */
+.row2 img {
+  margin-top: 10px;
+  width: 100px;
+}
+/* App.css */
+/* App.css */
+/* App.css */
+.userbook-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espacement égal entre les éléments */
+}
+
+.usercard-container {
+  flex-basis: calc(
+    25% - 20px
+  ); /* 25% de largeur avec un espacement de 20px entre les cartes */
+  margin-bottom: 20px; /* Espacement en bas de chaque carte */
+  margin-top: 100px;
+  margin-left: 20px;
+}
+
+.card-default {
+  width: 200px; /* Largeur initiale de la carte */
+  transition: width 0.3s; /* Animation de transition */
+}
+
+.card-hover {
+  width: 250px; /* Largeur de la carte au survol */
+  transition: width 0.3s; /* Animation de transition */
+}
+
+.title {
+  font-size: 1.2rem; /* Taille de la police pour le titre */
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 10px; /* Marge en bas du titre */
+  color: red;
+}
+
+.description {
+  font-size: 1rem; /* Taille de la police pour la description */
+  color: #666; /* Couleur du texte */
+  max-height: 300px; /* Hauteur maximale de la description */
+}
+
+.card-img-top {
+  height: 300px; /* Ajustement de la hauteur de l'image */
+  object-fit: cover; /* Assurez-vous que l'image couvre toute la zone de l'image */
+}
+.search-button {
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Supprimer les bordures */
+  padding: 10px 20px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de type pointer */
+  transition: background-color 0.3s; /* Animation de transition */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+
+.search-icon {
+  margin-right: 5px; /* Marge à droite de l'icône */
 }
